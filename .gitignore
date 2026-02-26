@@ -209,6 +209,8 @@ __marimo__/
 # MLflow
 notebooks/mlruns/
 notebooks/*.db
+mlruns/
+*.db
 
 # Datos procesados
 data/training/*.csv
