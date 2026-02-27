@@ -26,12 +26,22 @@ El modelo campeón ha sido registrado exitosamente en la plataforma de MLflow pa
 
 ![MLflow Registry](resources/images/mlflow_registry.jpg)
 
+### Model Deployment & API Inference
+The final XGBoost model has been deployed using a REST API built with **Flask**
+
+Example of a succesful request using `curl`:
+![API Inference](resources/images/api_inference.jpg)
+
 ### TODO:
 -[x] Completar la fase de ML Experimentations (Fase C)
 
 -[x] Completar la fase de ML Development Activities con scripts de preparación y entrenamiento (Fase D).
 
--[ ] Desarrollar la API web para servir el modelo en tiempo real (Fase E).
+-[x] Desarrollar la API web para servir el modelo en tiempo real (Fase E).
 
 -[ ] Contenerizar la aplicación usando Docker (Opcional/Siguiente paso).
+
+-[ ] Completar puntos faltantes de la fase C) ML Experimentation: **Expected Result:** notebooks and/or results (plots, images, docs, metrics, etc) about your experiments and evaluations.
+
+-[ ] Completar puntos faltantes de la fase D) ML Developtment Activities: Describe the features (variables) of the final training dataset.
 
