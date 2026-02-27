@@ -205,3 +205,15 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# MLflow
+notebooks/mlruns/
+notebooks/*.db
+mlruns/
+*.db
+
+# Datos procesados
+data/training/*.csv
+
+# Modelos entrenados
+models/*.pkl
