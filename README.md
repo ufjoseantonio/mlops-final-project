@@ -9,39 +9,38 @@ Student info:
 ## Project Name: [Bank Customer Churn Prediction using MLOps]
 
 ### Description:
-Este proyecto implementa un pipeline completo de Machine Learning Operations (MLOPS) para predecir  el abandono de clientes (Customer Churn) en una institución bancaria. El objetivo es identificar qué clientes tienen mayor probabilidad de cerrar sus cuentas, permitiendo al banco tomar acciones preventivas.
+This project implements a complete Machine Learning Operations (MLOps) pipeline to predict customer churn in a banking institution. The goal is to identify which customers are most likely to close their accounts, allowing the bank to take preventive actions.
 
 ### Implementation Doc (Arquitecture)
-El proyecto sigue una estructura modular estándar de DataScience:
-* **Fase de Experimentación:** Jupyter Notebooks integrados con **MLflow** para el rastreo de experimentos, hiperparámetros y métricas.
-* **Fase de Desarrollo (Scripts):** Código modular de Python (`src/`) para la preparación automatizada de datos (`data_preparation.py`) y el entrenamiento del modelo (`train.py`)
-* **Fase de Despliegue (Deployment):** [Esta sección lo llenaremos en la siguiente etapa con la API].
+The project follows a standard modular Data Science structure:
+* **Experimentation Phase:** Jupyter Notebooks integrated with **MLflow** for tracking experiments, hyperparameters, and metrics.
+* **Development Phase (Scripts):** Modular Python code (`src/`) for automated data preparation (`data_preparation.py`) and model training (`train.py`).
+* **Deployment Phase:** [This section will be updated in the next stage with the API].
 
 ### Results
-Durante la fase de experimentación se evaluaron múltiples algoritmos (Logistic Regression, Radom Forest, XGBoost).
-El modelo campeón definitivo fue **XGBoost**, logrando un **F1-Score de 0.58** en los datos de prueba. El modelo final, junto con su pipeline de preprocesamiento, ha sido serializado (`champion_model.pkl`) y está listo para producción.
+During the experimentation phase, multiple algorithms were evaluated (Logistic Regression, Random Forest, XGBoost).
+The definitive champion model was **XGBoost**, achieving an **F1-score of 0.58** on the test data. The final model, along with its preprocessing pipeline, has been serialized (`champion_model.pkl`) and is ready for production.
 
 ### MLflow Model Registry
-El modelo campeón ha sido registrado exitosamente en la plataforma de MLflow para su versionamiento y control en producción:
+The champion model has been successfully registered in the MLflow platform for versioning and production control:
 
 ![MLflow Registry](resources/images/mlflow_registry.jpg)
 
 ### Model Deployment & API Inference
-The final XGBoost model has been deployed using a REST API built with **Flask**
+The final XGBoost model has been deployed using a REST API buitl with **Flask**
 
 Example of a succesful request using `curl`:
 ![API Inference](resources/images/api_inference.jpg)
 
 ### TODO:
--[x] Completar la fase de ML Experimentations (Fase C)
+-[x] Complete the ML Experimentation phase (Phase C).
 
--[x] Completar la fase de ML Development Activities con scripts de preparación y entrenamiento (Fase D).
+-[x] Complete the ML Developtment Activities phase with data preparation and training scripts (Phase D).
 
--[x] Desarrollar la API web para servir el modelo en tiempo real (Fase E).
+-[x] Develop the web API to serve the model in real-time (Phase E).
 
--[ ] Contenerizar la aplicación usando Docker (Opcional/Siguiente paso).
+-[ ] Complete missing points from Phase C (ML Experimentation): Generate and save
+Completar puntos faltantes de la fase C) ML Experimentation: Generate and save evaluation results(plots, images, metrics) in the `reports` forder.
 
--[ ] Completar puntos faltantes de la fase C) ML Experimentation: **Expected Result:** notebooks and/or results (plots, images, docs, metrics, etc) about your experiments and evaluations.
-
--[ ] Completar puntos faltantes de la fase D) ML Developtment Activities: Describe the features (variables) of the final training dataset.
+-[ ] Complete missing points from Phase D) ML Developtment Activities: Describe the features (variables) of the final training dataset.
 
