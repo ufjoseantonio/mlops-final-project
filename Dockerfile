@@ -18,4 +18,4 @@ COPY models/ models/
 EXPOSE 5000
 
 # 7. Encendemos el motor de inferencia
-CMD ["Python", "src/serving.py"]
+CMD ["python", "src/serving.py"]

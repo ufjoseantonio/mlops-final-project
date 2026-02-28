@@ -66,3 +66,6 @@ As part of the continuos improvement of the ML lifecycle, the following optional
 
 * **Image Registry:** The image `bank-churn-api` is correctly registered in Docker Desktop, ready for deployment.
 ![Docker Desktop Registry](reports/docker_desktop.jpg)
+
+* **Container Running:** The API is succesfully serving the XGBoost model inside the container.
+![Docker Container Running](reports/docker_running.jpg)
