@@ -53,8 +53,16 @@ The final project has been packaged and delivered following industry MLOps best 
 * **Centralized Documentation:** This `README.md` serves as the central hub, linking to relevant scripts, notebooks, data dictionaries, and visual reports.
 * **Version Control** All development was conducted on dedicated feature branches (e.g., `feature/fase-e-api`, `docs/fase-f-delivery`) and merged into the `main` branch via structured Pull Requests.
 * **Reproducibility:** The repository contains all necessary code, datasets (`data/raw/`), and serialized models (`models/`) to reproduce the complete pipeline.
+* **Containerization:** The API has been dockerized to ensure that the serving environment is identical across development and production stages.
 
 ### Extra Iniciatives & Next Steps
 As part of the continuos improvement of the ML lifecycle, the following optional items have been addressed or planned:
 - [x] **MLflow Integration:** Implemented experiment tracking and model registry (Phase C & D).
-- [ ] **Docker Containerization:** Wrap the Flask REST API inside a Docker container to ensure isolated, reproducible, and cross-platform deployments.
+- [x] **Docker Containerization:** The Flask REST API and its dependencies were succesfully wrapped in a Docker container using a `python:3.11-slim` base image. This ensures a lightweight and isolated deployment.
+
+**Evidence of Docker Success:**
+* **Build Process:** The image was built successfully including all ML engines (XGBoost, Scikit-Learn, Pandas).
+![Docker Build Terminal](reports/docker_build.jpg)
+
+* **Image Registry:** The image `bank-churn-api` is correctly registered in Docker Desktop, ready for deployment.
+![Docker Desktop Registry](reports/docker_desktop.jpg)
